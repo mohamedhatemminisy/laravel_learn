@@ -24,6 +24,10 @@ Route::group(['prefix'=>'admin', 'middleware'=>'guest'],function(){
     Route::get('/login',function(){
        return "you must login";
     })->name('login');
+ 
+     Route::get('/admin_info','App\Http\Controllers\Admin\AdminController@index');
+
+     Route::Resource('product','App\Http\Controllers\Admin\ProductController');
 
 });
 
