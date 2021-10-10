@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $obj = new \stdClass();
+    $obj->name = "mohamed";
+    $obj->age  = "26";
+    return view('welcome',compact('obj'));
+
 });
 
 Route::get('/test1/ddvsha/ddas',function(){
